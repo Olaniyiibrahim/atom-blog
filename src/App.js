@@ -45,12 +45,14 @@ function Header() {
 
   return (
     <header>
-      <h1>
-        <span>⚛️</span>The Atomic Blog
+      <h1 className="spanner">
+        <span >⚛️</span>The Atomic Blog
+          <Results />
       </h1>
       <div>
-        <Results />
-        <SearchPosts />
+        <div className="header-actions">
+          <SearchPosts />
+        </div>
         <button onClick={onClearPosts}>Clear posts</button>
       </div>
     </header>
@@ -71,7 +73,7 @@ function SearchPosts() {
 
 function Results() {
   const { posts } = usePosts();
-  return <p>🚀 {posts.length} atomic posts found</p>;
+  return <p className="page">🚀 {posts.length} atomic posts found</p>;
 }
 
 const Main = memo(function Main() {

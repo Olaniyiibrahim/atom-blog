@@ -45,8 +45,8 @@ header {
 h1 {
   font-size: 26px;
   display: flex;
-  gap: 8px;
-  align-items: center;
+  gap: 4px;
+  /* align-items: center; */
 }
 
 h1 span {
@@ -91,7 +91,7 @@ textarea,
 button {
   font-size: 16px;
   padding: 8px 12px;
-  margin: 2px;
+  margin: 3px;
   border: 1px solid #ffe8cc;
   font-family: inherit;
   color: inherit;
@@ -135,6 +135,10 @@ main ul {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 32px;
 }
+header-actions {
+  display: flex;
+  gap: 16px;
+}
 
 main li {
   border: 1px solid #ffe8cc;
@@ -169,6 +173,12 @@ aside li button {
   padding: 4px 8px;
   font-size: 14px;
 }
+form {
+  display: flex;
+  flex-direction:row; 
+  gap: 16px;
+  margin-bottom: 30px;
+}
 
 /* responsiveness */
 
@@ -177,6 +187,14 @@ aside li button {
   main ul {
     grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
   }
+  
+
+  .spanner{
+    font-size: 14px;
+  }
+  header {
+      padding: 10px;
+  }
 }
 
 /* For mobile devices */
@@ -184,11 +202,37 @@ aside li button {
   main ul {
     grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
   }
+  
+
+aside li {
+  border: 1px solid #ffe8cc;
+  padding: 8px 8px;
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+}
+aside li p {
+  padding: 10px;
+  font-size: 14px;
+}
   header {
     flex-direction: column; /* Stack elements vertically */
     align-items: center; /* Center elements horizontally */
-    text-align: center; /* Center text */
+    text-align: center;
+    gap: 10px; /* Center text */
   }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  header-actions {
+  display: flex;
+  gap: 16px;
+}
+
 
 }
 
